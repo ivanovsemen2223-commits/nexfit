@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Спортивный костюм «Hier» — NEXFIT</title>
+<meta name="description" content="Современный мужской спортивный костюм «Hier». Худи и шорты из качественного хлопка. Доставка по всей России.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&family=Comfortaa:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="header">
+  <div class="container header__inner">
+    <a href="#" class="logo">ne<span class="logo__x">X</span>fit</a>
+    <nav class="nav">
+      <a href="#">Каталог</a>
+      <a href="#">О нас</a>
+      <a href="#">Контакты</a>
+      <a href="#">Доставка и оплата</a>
+      <a href="#">FAQ</a>
+    </nav>
+    <div class="search">
+      <input type="text" placeholder="Найти товар">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+    </div>
+    <div class="header__icons">
+      <button aria-label="Аккаунт"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6"/></svg></button>
+      <button aria-label="Избранное"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7.5-4.8-10-9.3C.5 8 2.5 4.5 6 4.5c2.2 0 3.8 1.2 6 3.5 2.2-2.3 3.8-3.5 6-3.5 3.5 0 5.5 3.5 4 7.2C19.5 16.2 12 21 12 21z"/></svg></button>
+      <button aria-label="Корзина" class="cart-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 7h12l1.5 13h-15L6 7z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></svg><span class="cart-count" id="cartCount" hidden>0</span></button>
+    </div>
+  </div>
+</header>
+
+<main>
+<div class="container">
+
+  <nav class="breadcrumbs">
+    <a href="#">Главная</a> / <a href="#">Каталог</a> / <a href="#">Мужское</a> / <span>Спортивные костюмы</span>
+  </nav>
+
+  <h1 class="product-title">Спортивный костюм <span class="display">«Hier»</span></h1>
+
+  <section class="product">
+    <div class="product__info">
+      <div class="rating">
+        <span class="stars">★★★★★</span>
+        <span class="rating__count">(214)</span>
+      </div>
+      <div class="sku">Арт. 894532</div>
+
+      <div class="option">
+        <div class="option__label"><b>Цвет:</b> <span id="colorName">серый</span></div>
+        <div class="swatches">
+          <button class="swatch" style="background:#111" data-color="чёрный" aria-label="чёрный"></button>
+          <button class="swatch is-active" style="background:#c9c9c9" data-color="серый" aria-label="серый"></button>
+          <button class="swatch" style="background:#9d8d72" data-color="бежевый" aria-label="бежевый"></button>
+          <button class="swatch" style="background:#5a5d58" data-color="хаки" aria-label="хаки"></button>
+        </div>
+      </div>
+
+      <div class="option">
+        <div class="option__label option__label--row"><b>Размер:</b> <a class="size-table" href="#">Таблица размеров ›</a></div>
+        <div class="sizes display">
+          <button class="size is-active">M</button>
+          <button class="size">L</button>
+          <button class="size">XL</button>
+          <button class="size">Oversize</button>
+        </div>
+        <div class="stock">Осталось: 10 комплектов</div>
+      </div>
+
+      <div class="price">
+        <span class="price__now display">3 570 ₽</span>
+        <span class="price__old">5 100 ₽</span>
+      </div>
+
+      <div class="buy">
+        <div class="qty">
+          <button id="qtyMinus" aria-label="Меньше">−</button>
+          <span id="qtyVal">1</span>
+          <button id="qtyPlus" class="qty__plus" aria-label="Больше">+</button>
+        </div>
+        <button class="add-to-cart" id="addToCart">Добавить в корзину</button>
+      </div>
+
+      <div class="thumbs">
+        <button class="thumb" data-img="assets/thumb1.jpg"><img src="assets/thumb1.jpg" alt="Деталь костюма «Hier»"></button>
+        <button class="thumb" data-img="assets/thumb2.jpg"><img src="assets/thumb2.jpg" alt="Шорты костюма «Hier»"></button>
+      </div>
+    </div>
+
+    <div class="product__gallery">
+      <img src="assets/hero.jpg" alt="Спортивный костюм «Hier», серый" id="mainImg">
+      <button class="gal-arrow gal-arrow--prev" id="galPrev" aria-label="Назад">‹</button>
+      <button class="gal-arrow gal-arrow--next" id="galNext" aria-label="Вперёд">›</button>
+      <button class="fav" id="favBtn" aria-label="В избранное"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M12 21s-7.5-4.8-10-9.3C.5 8 2.5 4.5 6 4.5c2.2 0 3.8 1.2 6 3.5 2.2-2.3 3.8-3.5 6-3.5 3.5 0 5.5 3.5 4 7.2C19.5 16.2 12 21 12 21z"/></svg></button>
+    </div>
+  </section>
+
+  <section class="about">
+    <h2 class="about__title">О товаре:</h2>
+    <div class="tabs">
+      <button class="tab is-active" data-tab="desc">Описание</button>
+      <button class="tab" data-tab="specs">Характеристики</button>
+      <button class="tab" data-tab="care">Уход</button>
+    </div>
+
+    <div class="tab-pane is-active" id="tab-desc">
+      <div class="about__cols">
+        <p>Современный мужской спортивный костюм, созданный для активного образа жизни и повседневного комфорта. В&nbsp;комплект входят: худи с капюшоном и&nbsp;удобные шорты с карманами. Подходит как для тренировок, так и для повседневной носки.</p>
+        <div>
+          <p class="adv-title">Преимущества:</p>
+          <ul class="adv">
+            <li>Материал: высококачественный хлопок с добавлением полиэстера — приятный на ощупь, дышащий и&nbsp;износостойкий</li>
+            <li>Удобная посадка: прямой крой не сковывает движений</li>
+            <li>Регулируемый пояс: шнурок на шортах позволяет подогнать посадку под себя</li>
+            <li>Детали: капюшон, карманы, эластичные манжеты, всё для максимального удобства</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="tab-pane" id="tab-specs">
+      <div class="about__cols">
+        <dl class="specs">
+          <div><dt>Состав</dt><dd>80% хлопок, 20% полиэстер</dd></div>
+          <div><dt>Плотность</dt><dd>360 г/м²</dd></div>
+          <div><dt>Комплект</dt><dd>худи + шорты</dd></div>
+          <div><dt>Сезон</dt><dd>весна–лето</dd></div>
+          <div><dt>Страна производства</dt><dd>Россия</dd></div>
+        </dl>
+      </div>
+    </div>
+
+    <div class="tab-pane" id="tab-care">
+      <div class="about__cols">
+        <p>Машинная стирка при 30°C, не отбеливать, не сушить в&nbsp;барабане. Гладить при низкой температуре с изнаночной стороны. Не подвергать химчистке — так костюм надолго сохранит цвет и форму.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+  <section class="motion" id="motion" aria-label="Создан для движения">
+    <div class="motion__inner">
+      <h2 class="motion__title" aria-hidden="true">
+        <span class="motion__word">СОЗДАН</span>
+        <span class="motion__word">ДЛЯ</span>
+        <span class="motion__word">ДВИЖЕНИЯ</span>
+      </h2>
+      <div class="motion__frame">
+        <picture>
+          <source media="(orientation: portrait)" srcset="assets/thumb1.jpg">
+          <img src="assets/motion.jpg" alt="Костюм «Hier» в движении">
+        </picture>
+      </div>
+      <p class="motion__caption">Плотный хлопок 360 г/м² — держит форму в&nbsp;каждом движении</p>
+    </div>
+  </section>
+
+<div class="container">
+  <section class="viewed">
+    <div class="viewed__head">
+      <h2>То, что вы смотрели</h2>
+      <div class="viewed__nav">
+        <button class="round round--ghost" id="vwPrev" aria-label="Назад">←</button>
+        <button class="round round--solid" id="vwNext" aria-label="Вперёд">→</button>
+      </div>
+    </div>
+
+    <div class="cards" id="cards">
+      <a class="card" href="#">
+        <div class="card__img">
+          <span class="badge">− 20%</span>
+          <img src="assets/card1.jpg" alt="Свитшот «Rains»">
+        </div>
+        <div class="card__row">
+          <span class="card__name">Свитшот «Rains»</span>
+          <span class="card__price display">3 280 ₽</span>
+        </div>
+        <div class="card__old">4 100 ₽</div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__img">
+          <span class="badge">− 50%</span>
+          <img src="assets/card2.jpg" alt="Спортивный костюм">
+        </div>
+        <div class="card__row">
+          <span class="card__name">Спортивный костюм</span>
+          <span class="card__price display">4 200 ₽</span>
+        </div>
+        <div class="card__old">8 400 ₽</div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__img">
+          <span class="badge">− 30%</span>
+          <img src="assets/card3.jpg" alt="Костюм на замке">
+        </div>
+        <div class="card__row">
+          <span class="card__name">Костюм на замке</span>
+          <span class="card__price display">4 000 ₽</span>
+        </div>
+        <div class="card__old">5 700 ₽</div>
+      </a>
+    </div>
+  </section>
+
+  <section class="perks">
+    <div class="perk">
+      <div class="perk__num display">01</div>
+      <h3>Доставка по всей России</h3>
+      <p>Отправляем в день заказа. По Москве — курьером за 1–2 дня, в регионы — СДЭК и Почтой России.</p>
+    </div>
+    <div class="perk">
+      <div class="perk__num display">02</div>
+      <h3>Примерка перед оплатой</h3>
+      <p>Не подошёл размер — возврат бесплатный в течение 14 дней. Деньги вернём на карту за 1 день.</p>
+    </div>
+    <div class="perk">
+      <div class="perk__num display">03</div>
+      <h3>Собственное производство</h3>
+      <p>Шьём в России из плотного хлопка 360 г/м². Контролируем качество каждой партии вручную.</p>
+    </div>
+  </section>
+
+  <section class="reviews">
+    <div class="reviews__head">
+      <h2>Отзывы покупателей</h2>
+      <div class="reviews__summary"><span class="stars">★★★★★</span> 4,8 из 5 · 214 отзывов</div>
+    </div>
+    <div class="reviews__grid">
+      <article class="review">
+        <div class="review__top">
+          <div class="review__person">
+            <span class="review__avatar">Д</span>
+            <div>
+              <span class="review__name">Дмитрий К.</span>
+              <span class="review__verified">Проверенная покупка</span>
+            </div>
+          </div>
+          <span class="stars">★★★★★</span>
+        </div>
+        <p>Брал серый в размере M — сел идеально. Ткань плотная, не просвечивает, после трёх стирок выглядит как новый.</p>
+        <div class="review__meta">12 мая · размер M · серый</div>
+      </article>
+      <article class="review">
+        <div class="review__top">
+          <div class="review__person">
+            <span class="review__avatar">А</span>
+            <div>
+              <span class="review__name">Артём В.</span>
+              <span class="review__verified">Проверенная покупка</span>
+            </div>
+          </div>
+          <span class="stars">★★★★★</span>
+        </div>
+        <p>Заказывал в подарок брату. Доставка два дня, упаковка аккуратная. Капюшон держит форму, швы ровные.</p>
+        <div class="review__meta">28 апреля · размер XL · чёрный</div>
+      </article>
+      <article class="review">
+        <div class="review__top">
+          <div class="review__person">
+            <span class="review__avatar">О</span>
+            <div>
+              <span class="review__name">Олег С.</span>
+              <span class="review__verified">Проверенная покупка</span>
+            </div>
+          </div>
+          <span class="stars">★★★★☆</span>
+        </div>
+        <p>Костюм отличный, но бежевый в жизни чуть темнее, чем на фото. По качеству вопросов нет — ношу каждый день.</p>
+        <div class="review__meta">15 апреля · размер Oversize · бежевый</div>
+      </article>
+    </div>
+  </section>
+</div>
+
+</main>
+
+<footer class="footer">
+  <div class="footer__type display" aria-hidden="true"><span id="footerFit">nexfit</span></div>
+  <div class="footer__top container">
+    <div class="footer__col footer__col--brand">
+      <a href="#" class="logo">ne<span class="logo__x">X</span>fit</a>
+      <p>Спортивная одежда собственного производства. Шьём в России с 2019 года.</p>
+    </div>
+    <div class="footer__col">
+      <h4>Каталог</h4>
+      <a href="#">Спортивные костюмы</a>
+      <a href="#">Худи и свитшоты</a>
+      <a href="#">Брюки и джоггеры</a>
+      <a href="#">Новинки</a>
+    </div>
+    <div class="footer__col">
+      <h4>Покупателям</h4>
+      <a href="#">Доставка и оплата</a>
+      <a href="#">Возврат и обмен</a>
+      <a href="#">Таблица размеров</a>
+      <a href="#">FAQ</a>
+    </div>
+    <div class="footer__col">
+      <h4>Контакты</h4>
+      <a href="tel:+78001003570">8 800 100-35-70</a>
+      <a href="mailto:hello@nexfit.ru">hello@nexfit.ru</a>
+      <p>Ежедневно с 9:00 до 21:00</p>
+    </div>
+  </div>
+  <div class="footer__bar">
+    <div class="container footer__bar-inner">
+      <span>© 2026 NEXFIT</span>
+      <span class="footer__bar-right">
+        <span>Политика конфиденциальности</span>
+        <a href="https://t.me/Frilste" target="_blank" rel="noopener" class="footer__tg">Связаться: Telegram @Frilste</a>
+      </span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.18/dist/lenis.min.js"></script>
+<script src="app.js"></script>
+<script src="scroll.js"></script>
+</body>
+</html>
